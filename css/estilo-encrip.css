@@ -1,0 +1,272 @@
+:root {
+    --blanco: #ffffff;
+    --fondo: #e5e5e5;
+    --paleta-ppal-dark: #0A3871;
+    --paleta-ppal-light: #D8DFE8;
+    --gris-500: #343A40;
+    --gris-400:#495057;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',
+    sans-serif;
+    font-family: 'Krub',
+    sans-serif;
+    font-family: 'Source Sans Pro',
+    sans-serif;
+    background-color: var(--fondo);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .logo {
+        margin-left: 0 !important;
+    }
+
+    .button {
+        padding: 12px !important;
+    }
+
+}
+
+.button {
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--paleta-ppal-dark);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+.button:hover {
+    transform: scale(1.03);
+    transition: 1s, all;
+}
+
+/* bloque logo*/
+.logo {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 10%;  
+}
+
+/* .logo img:hover {
+    transform: rotate(calc(3*360deg));
+    transition: 2s;
+} */
+
+
+/* bloque encriptar*/
+.encriptador {
+    width: 52%;
+    /* margin-top: 168px; */
+    margin-left: 0px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .encriptador {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.encriptador form {
+    bottom: 72px;
+
+}
+
+.encriptador textarea {
+    background: transparent;
+    border: hidden;
+    width: 100%;
+    height: 340px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--paleta-ppal-dark);
+}
+
+::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--paleta-ppal-dark);
+}
+
+
+.bloque-submit {
+    margin-bottom: 32px;
+}
+
+.bloque-submit div>p {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.bloque-submit div>p:first-child {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--gris-400);
+    margin-right: 8px;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 15px;
+
+}
+
+.bloque-submit div>p:last-child {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gris-400);
+}
+
+.btn-encriptador {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.btn-encriptador button:first-child {
+    color: var(--blanco);
+    background-color: var(--paleta-ppal-dark);
+    margin-right: 12px;
+    width: 50%;
+}
+.btn-encriptador button:last-child {
+    color: var(--paleta-ppal-dark);
+    background-color: var(--fondo);
+    margin-left: 12px;
+    width: 50%;
+}
+
+
+/*bloque desencriptar*/
+
+.desencriptador {
+    width: 22%;
+    background-color: var(--blanco);
+    margin-top: 40px;
+    margin-right: 40px;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+    .desencriptador {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .sinMensaje {
+        margin: 32px !important;
+    }
+
+    .sinMensaje img {
+        display: none;
+
+    }
+
+}
+
+
+/*SinMensaje*/
+.sinMensaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 150px;
+    text-align: center;
+    color: var(--gris-400);
+}
+
+.sinMensaje img {
+    width: 100%;
+}
+
+.sinMensaje img+p {
+    color: var(--gris-500);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    margin: 16px 0;
+}
+
+.sinMensaje p+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gris-400);
+    margin: 0;
+}
+
+/*salidaMensaje*/
+.desencriptador form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.desencriptador textarea {
+    margin: 32px;
+    border: hidden;
+    width: auto;
+    background: transparent;
+    min-height: 400px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--gris-400);
+}
+
+.desencriptador button {
+    width: auto;
+    margin: 32px 32px;
+    background-color: var(--blanco);
+    color: var(--paleta-ppal-dark);
+}

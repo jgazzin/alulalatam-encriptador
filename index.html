@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenge one: Encriptador - Alura Latam"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="css/estilo-encrip.css" as="style">
+    <link rel="stylesheet" href="css/estilo-encrip.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krub:ital,wght@0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <title>DeCode - Encriptador</title>
+</head>
+<body>
+
+    <main class="main">
+        <header class="logo">
+            <img src="img/logoAsinMargen.svg" alt="logo Alura">
+        </header>
+
+        <section class="encriptador">
+            <form action="">
+                <textarea name="texto-entrada" cols="20" rows="10" autofocus placeholder="Ingrese el texto aquí..."></textarea>
+                <div class="bloque-submit">
+                    <div>
+                        <p>!</p>
+                        <p>Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="btn-encriptador">
+                        <button class="button" type="button" onclick="encriptar()">Encriptar</button>
+                        <button class="button" type="button" onclick="desencriptar()" >Desencriptar</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="desencriptador">
+            <!-- <div class="sinMensaje">
+                <img src="img/Muñeco1x.svg" alt="imagen persona investigando con lupa">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div> -->
+            <form action="" class="salidaMensaje">
+                <textarea name="texto-salida" cols="14" rows="10"></textarea>
+                <button class="button" type="button" onclick="copiar()" >Copiar</button>
+            </form>
+        </section>
+    </main>
+    
+    /* vinculo con archivo javaS para funcionalidades */
+    <script src="java.js"></script>
+
+</body>
+</html>

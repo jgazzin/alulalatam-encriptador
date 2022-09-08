@@ -1,0 +1,47 @@
+
+
+<script>
+const inputTexto ="HOla como EstaS";
+var outputMensaje = inputTexto.toLowerCase();
+
+
+document.write(outputMensaje);
+document.write("<br>");
+
+
+
+function encriptar () {
+    // outputMensaje = inputTextoMinuscula.replace("e", "enter");
+    // outputMensaje = outputMensaje.replace("i", "imes");
+    // outputMensaje = outputMensaje.replace("a", "ai");
+    // outputMensaje = outputMensaje.replace("o", "ober");
+    // outputMensaje = outputMensaje.replace("u", "ufat");
+
+    var arrayRemplazar = ["a", "e", "i", "o", "u"];
+    var arrayRemplazantes = ["imes", "ai", "ober", "ufat"]; 
+
+    let x = "";
+    let y = "";
+
+    for (let index = 0; index < arrayRemplazar.length; index++) {
+        x = arrayRemplazar [index];
+        y = arrayRemplazantes [index];
+        outputMensaje = outputMensaje.replace(x, y);
+
+        /* control:
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+        document.write(outputMensaje);
+        document.write("<br>"); */
+    }
+
+    return outputMensaje;
+}
+
+
+encriptar(outputMensaje);
+document.write(outputMensaje);
+
+</script>
