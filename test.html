@@ -1,7 +1,7 @@
 
 
 <script>
-const inputTexto ="HOla como EstaS";
+const inputTexto ="ala";
 var outputMensaje = inputTexto.toLowerCase();
 
 
@@ -10,7 +10,7 @@ document.write("<br>");
 
 
 
-function encriptar () {
+function encriptar (outputMensaje) {
     // outputMensaje = inputTextoMinuscula.replace("e", "enter");
     // outputMensaje = outputMensaje.replace("i", "imes");
     // outputMensaje = outputMensaje.replace("a", "ai");
@@ -18,7 +18,7 @@ function encriptar () {
     // outputMensaje = outputMensaje.replace("u", "ufat");
 
     var arrayRemplazar = ["a", "e", "i", "o", "u"];
-    var arrayRemplazantes = ["imes", "ai", "ober", "ufat"]; 
+    var arrayRemplazantes = ["ai", "enter","imes", "ober", "ufat"]; 
 
     let x = "";
     let y = "";
@@ -26,15 +26,19 @@ function encriptar () {
     for (let index = 0; index < arrayRemplazar.length; index++) {
         x = arrayRemplazar [index];
         y = arrayRemplazantes [index];
-        outputMensaje = outputMensaje.replace(x, y);
 
-        /* control:
+        outputMensaje = outputMensaje.replaceAll(x, y);
+
+        // if (outputMensaje.includes(x)) {
+        //     outputMensaje = outputMensaje.replaceAll(x, y);
+        // }
+
         document.write(x);
         document.write("<br>");
         document.write(y);
         document.write("<br>");
         document.write(outputMensaje);
-        document.write("<br>"); */
+        document.write("<br>"); 
     }
 
     return outputMensaje;
@@ -42,6 +46,6 @@ function encriptar () {
 
 
 encriptar(outputMensaje);
-document.write(outputMensaje);
+// document.write(outputMensaje);
 
 </script>
